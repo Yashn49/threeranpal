@@ -11,12 +11,12 @@ rev=" "
 arr=($RDP1 $RDP2 $RDP3)
 for (( i=0; i<${#arr[@]}; i++ ))
 do
- temp=${arr[$i]}
- while [ ${arr[$i]} -gt 0 ]
+ temp=${arr[i]}
+ while [ ${arr[i]} -gt 0 ]
  do
-  s=$(( ${arr[$i]} % 10 ))
-  arr[$i]=$(( ${arr[$i]} / 10 ))
-  rev=$( echo ${rev}${s} )
+  s=$(( ${arr[i]} % 10 ))
+  arr[i]=$(( ${arr[i]} / 10 ))
+  rev=$( echo $rev$s )
  done
  if [ $temp -eq $rev ]
  then
